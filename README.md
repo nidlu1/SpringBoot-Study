@@ -1,6 +1,6 @@
 # SpringBoot-Study
-데어 프로그레밍님의 유투브 강좌를 보고 코딩한 소스코드
-링크: https://www.youtube.com/channel/UCVrhnbfe78ODeQglXtT1Elw
+1. 데어 프로그레밍님의 유투브 강좌를 보고 코딩한 소스코드
+2. 링크: https://www.youtube.com/channel/UCVrhnbfe78ODeQglXtT1Elw
 
 ## 개발 환경
 1. OS  : Window10
