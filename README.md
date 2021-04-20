@@ -3,12 +3,12 @@
 링크: https://www.youtube.com/channel/UCVrhnbfe78ODeQglXtT1Elw
 
 ## 개발 환경
-OS  : Window10
-IDE : STS4 , VS code
-Java  version : "15.0.1" 2020-10-20
-DB : MySQL
-DB Tool : MySQL Workbench
-Template Engine : JSP
+1. OS  : Window10
+2. IDE : STS4 , VS code
+3. Java  version : "15.0.1" 2020-10-20
+4. DB : MySQL
+5. DB Tool : MySQL Workbench
+6. Template Engine : JSP
 
 ## 주제
 1. 스프링 부트 공부
