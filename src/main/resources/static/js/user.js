@@ -6,6 +6,9 @@ let index = {
 		// $("#btn-save").on("click",function(){
 			this.save(); // ()=>{}사용시, this = index /function(){}사용시 this = window
 		});
+		$("#btn-update").on("click", ()=>{
+			this.update();
+		});
 		/*
 		$("#btn-login").on("click", ()=>{
 			this.login();
@@ -26,9 +29,9 @@ let index = {
 		$.ajax({
 			type: "POST",
 			url:  "/auth/joinProc",
-			data: JSON.stringify(data), //http body데이터
+			data: JSON.stringify(data), //http body데이터 자바스크립트나 객체 data를 json문자열로 변환.
 			contentType: "application/json;charset=utf-8", //body데이터가 어떤 타입인지 (MIME)
-			dataType: "json" //요청을 서버로 보내서 응답이 왔을 때, 기본적으로 모든 것이 문자열(stream)이지만 (문자열 구조가 json이라면) => javascript 오브젝트로 변경
+			dataType: "json" //요청을 서버로 보내서 응답이 왔을 때, 기본적으로 모든 것이 문자열(stream)이지만 (문자열 구조가 json이라면) => javascript 오브젝트로 변경 //서버쪽에서 보내는 컨텐츠타입도 json으로 지정.
 		}).done(function(resp){
 			alert("회원가입이 완료되었다.");
 			console.log(resp);
@@ -37,7 +40,29 @@ let index = {
 			alert(JSON.stringify(error));
 		}); 
 	},
+	update: function(){
+		let data = {
+			id: $("#id").val(),
+			username: $("#username").val(),
+			password: $("#password").val(),
+			email: $("#email").val()
+		};
+		$.ajax({
+			type: "PUT",
+			url:  "/user",
+			data: JSON.stringify(data),
+			contentType: "application/json;charset=utf-8",
+			dataType: "json"
+		}).done(function(resp){
+			alert("회원수정이 완료되었다.");
+			console.log(resp);
+			location.href="/";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		}); 
+	},
 	/*
+	스프링 시큐리티가 로그인기능을 대신해서 주석처리
 	login: function(){
 		let data = {
 			username: $("#username").val(),

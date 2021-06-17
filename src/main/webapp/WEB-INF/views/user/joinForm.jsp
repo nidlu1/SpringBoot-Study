@@ -20,5 +20,6 @@
 	<button id="btn-save" class="btn btn-primary">회원가입완료</button>
 </div>
     
-
 <%@ include file="../layout/footer.jsp"%>
+<%@ include file="../layout/script.jsp"%>
+<script src="/js/user.js"></script>

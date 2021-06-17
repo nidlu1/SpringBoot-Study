@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 	public String handleArgumentException(IllegalArgumentException e) {
 		System.out.println(">>>>>GlobalExceptionHandler.handleArgumentException(IllegalArgumentException)");
 		System.out.println("<<<<<GlobalExceptionHandler.handleArgumentException(IllegalArgumentException)");
-		return "<h1>"+e.getMessage()+".power</h1>";
+		return "<h1>"+e.getMessage()+"</h1>";
 	}
 	
 	@ExceptionHandler(value=Exception.class)
